@@ -14,10 +14,10 @@ public class LambdaTest {
 //		String separator = ",";
 //		Arrays.asList( "a", "b", "d" ).forEach(
 //				( String e ) -> System.out.print( e + separator ) );
-		Arrays.asList( "a", "b", "d","e" ).sort( ( e1, e2 ) -> {
-			int a = e1.compareTo( e2 );
-			return a;
-		} );
-		System.exit(0);
+//		Arrays.asList( "a", "b", "d","e" ).sort( ( e1, e2 ) -> {
+//			int a = e1.compareTo( e2 );
+//			return a;
+//		} );
+//		System.exit(0);
 	}
 }
