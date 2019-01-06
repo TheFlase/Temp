@@ -13,6 +13,7 @@ public class ServerHelloHandler extends SimpleChannelHandler{
         String s = (String) e.getMessage();
         System.out.println(s);
 
+
         //回写数据
         ctx.getChannel().write("hi ,i am from server");
         super.messageReceived(ctx, e);
