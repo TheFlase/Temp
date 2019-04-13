@@ -1,4 +1,4 @@
-package com.wgc.base.thread.multithread;
+package com.wgc.base.thread.multithread.syncvolatile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,22 +6,22 @@ import java.util.List;
 /**
  * @Author wgc
  * @Description //TODO
- * @Date 4/12/2019
+ * @Date 4/13/2019
  **/
-public class Demo13 {
-    volatile int count = 0;
+public class Demo14 {
+    int count = 0;
 
-    public void test() {
+    public synchronized void test() {
         for (int i = 0; i < 10000; i++) {
             count++;
         }
     }
 
     public static void main(String[] args) {
-        Demo13 demo13 = new Demo13();
+        Demo14 demo14 = new Demo14();
         List<Thread> threads = new ArrayList<Thread>();
         for (int i = 0; i < 10; i++) {
-            threads.add(new Thread(demo13::test, "thread-" + i));
+            threads.add(new Thread(demo14::test, "thread-" + i));
         }
         threads.forEach((o) -> o.start()); //JDK1.8新特性
         threads.forEach((o) -> { //JDK1.8新特性
@@ -31,11 +31,9 @@ public class Demo13 {
                 e.printStackTrace();
             }
         });
-        System.out.println(demo13.count);
+        System.out.println(demo14.count);
     }
-
     /**
-     *  volatile并不能保证多个线程共同修改running变量时所带来的不一致问题，
-     *  也就是说volatile不能替代synchronized
+     * 对比上一个程序，可以用synchronized解决，synchronize可以保证可见性和原子性，volatile只能保证可见性
      */
 }

@@ -1,4 +1,4 @@
-package com.wgc.base.thread.multithread;
+package com.wgc.base.thread.multithread.syncvolatile;
 
 /**
  * @Author wgc

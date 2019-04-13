@@ -1,6 +1,4 @@
-package com.wgc.base.thread.multithread;
-
-import org.apache.commons.lang3.builder.ToStringExclude;
+package com.wgc.base.thread.multithread.syncvolatile;
 
 /**
  * @Author wgc
