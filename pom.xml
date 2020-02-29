@@ -3,8 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wgc</groupId>
     <artifactId>test</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>study_2020</module>
+    </modules>
     <name>test Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
