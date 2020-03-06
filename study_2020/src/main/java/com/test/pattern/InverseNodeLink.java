@@ -49,11 +49,27 @@ public class InverseNodeLink {
 
     public static MYNode reverseNode(MYNode head){
         MYNode pre = null, cur = head, next = null;
+        int  i = 1;
         while(cur != null) {
+            System.out.println("==============================");
+            System.out.println("前前前，第"+i+"次执行：");
+            System.out.println("cur="+cur.getNodeName());
+            if(pre !=null){
+                System.out.println("pre="+pre.getNodeName());
+            }
+            if(next !=null){
+                System.out.println("next="+next.getNodeName());
+            }
             next = cur.getNextNode();
             cur.setNextNode(pre);
             pre = cur;
             cur = next;
+            System.out.println("后后后：");
+            System.out.println("cur="+cur.getNodeName());
+            System.out.println("pre="+pre.getNodeName());
+            System.out.println("next="+next.getNodeName());
+            System.out.println("==============================");
+            i++;
         }
         return pre;
     }
