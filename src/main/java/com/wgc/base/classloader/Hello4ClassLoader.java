@@ -1,8 +1,8 @@
-package com.wgc.concurrent.auto;
+package com.wgc.base.classloader;
 
 /**
  * @Author wgc
- * @Description //TODO
+ * @Description
  * @Date 4/23/2020
  **/
 public class Hello4ClassLoader {

@@ -1,4 +1,4 @@
-package com.wgc.concurrent.auto;
+package com.wgc.base.classloader;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -12,7 +12,7 @@ public class MyClassLoaderTest {
     public static void main(String[] args) {
         MyClassLoader myClassLoader = new MyClassLoader("d:/lib");
         try {
-            Class<?> customDefindClass = myClassLoader.loadClass("com.wgc.concurrent.auto.Hello4ClassLoader");
+            Class<?> customDefindClass = myClassLoader.loadClass("com.wgc.base.classloader.Hello4ClassLoader");
             if(customDefindClass != null){
                 Object obj = customDefindClass.newInstance();
                 Method declaredMethod = customDefindClass.getDeclaredMethod("say", null);
