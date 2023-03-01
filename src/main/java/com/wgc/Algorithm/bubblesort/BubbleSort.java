@@ -10,8 +10,10 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arry = {3,5,4,1,2,6};
+//        int[] arry = {3,2,1};
 //        BubbleSort.bubbleSort(arry);
-        BubbleSort.insertionSort(arry);
+//        BubbleSort.insertionSort(arry);
+        BubbleSort.selectedSort(arry);
 //        BubbleSort.test();
     }
 
@@ -88,6 +90,35 @@ public class BubbleSort {
             array[j+1] = value;
         }
 
+        System.out.println("排序后："+ Arrays.toString(array));
+    }
+
+    /**
+     * 选择排序
+     * @param array
+     */
+    static void selectedSort(int[] array){
+        if(array.length<=1){
+            return;
+        }
+        System.out.println("排序前："+ Arrays.toString(array));
+        for (int i = 1; i < array.length; i++) {
+            int j = i-1;
+            int mix = 0;
+            int index = 0;
+            for (; j< array.length-1 ; j++) {
+                System.out.println("array[j]="+array[j]+",array[j+1]="+array[j+1]);
+                if(array[j]>array[j+1]){
+                    mix = array[j+1];
+                    index = j+1;
+                }
+            }
+            if(index != 0){
+                array[index] = array[i-1];
+                array[i-1] = mix;
+            }
+
+        }
         System.out.println("排序后："+ Arrays.toString(array));
     }
 
